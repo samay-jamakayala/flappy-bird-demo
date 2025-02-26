@@ -3,7 +3,7 @@ using UnityEngine;
 // DONE
 public class GroundBehavior : MonoBehaviour
 {
-    [SerializeField] private float _velocity = 5f;
+    [SerializeField] private float _velocity = 0.1f;
     [SerializeField] private float _width = 5f;
 
     private SpriteRenderer _spriteRenderer;
