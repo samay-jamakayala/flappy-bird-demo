@@ -33,7 +33,7 @@ public class PipeSpawnerBehavior : MonoBehaviour
     private void SpawnPipe()
     {
         // set spawnPosition based on Random.Range of possible height
-        Vector2 spawnPosition = transform.position + new Vector3(0, Random.Range(-_heightRange, _heightRange));
+        Vector2 spawnPosition = transform.position + new Vector3(1.5f, Random.Range(-_heightRange, _heightRange));
         // instantiate Pipe prefab at that spawnPosition
         GameObject pipe = Instantiate(_pipe, spawnPosition, Quaternion.identity);
     

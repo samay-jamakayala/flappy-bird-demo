@@ -3,7 +3,7 @@ using UnityEngine;
 // DONE
 public class GroundBehavior : MonoBehaviour
 {
-    [SerializeField] private float _velocity = 1f;
+    [SerializeField] private float _velocity = 0.1f;
     [SerializeField] private float _width = 5f;
 
     private SpriteRenderer _spriteRenderer;
@@ -21,7 +21,7 @@ public class GroundBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _spriteRenderer.size = new Vector2(_spriteRenderer.size.x * _velocity * Time.deltaTime, _spriteRenderer.size.y);
+        _spriteRenderer.size = new Vector2(_spriteRenderer.size.x + _velocity * Time.deltaTime, _spriteRenderer.size.y);
     
         if (_spriteRenderer.size.x > _width)
         {
