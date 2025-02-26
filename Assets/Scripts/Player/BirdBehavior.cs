@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BirdBehavior : MonoBehaviour
@@ -11,12 +9,13 @@ public class BirdBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // assign Rigidbody2D to _rb
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // when the left button is pressed in this frame...
+        // adjust the velocity of _rb by Vector3.up multiplied by _velocity
     }
 }
