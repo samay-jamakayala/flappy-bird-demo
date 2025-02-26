@@ -1,25 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+// DONE
 public class PipeBehavior : MonoBehaviour
 {
     [SerializeField] private float _velocity = 0.5f;
 
-    // Start is called before the first frame update
+    private Transform pipe0;
+    private Transform pipe1;
+
     void Start()
     {
-
+        // assign the transforms of the child pipes
+        pipe0 = transform.GetChild(0);
+        pipe1 = transform.GetChild(0);  
     }
 
     // Update is called once per frame
     void Update()
     {
-        // move the pipe left after frame according to the velocity, make sure to multiply by Time.deltaTime
+        // move the child pipes left after frame according to the velocity, make sure to multiply by Time.deltaTime
+        pipe0.position += Vector3.left * _velocity * Time.deltaTime;
+        pipe1.position += Vector3.left * _velocity * Time.deltaTime;
     }
 
-    private void OTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // if trigger touches GameObject with Player tag, increase score
+        ScoreManager.ScoreManagerInstance.IncreaseScore();
     }
 }

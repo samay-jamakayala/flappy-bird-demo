@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// DONE
 public class BirdBehavior : MonoBehaviour
 {
     [SerializeField] private float _velocity = 1.5f;
@@ -10,17 +11,23 @@ public class BirdBehavior : MonoBehaviour
     void Start()
     {
         // assign Rigidbody2D to _rb
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         // when the left button is pressed in this frame...
-        // adjust the velocity of _rb by Vector3.up multiplied by _velocity
+        if (Input.GetMouseButtonDown(0))
+        {
+            // adjust the velocity of _rb by Vector3.up multiplied by _velocity
+            _rb.velocity = Vector2.up * _velocity;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // call GameOver from GameManager
+        GameManager.GameManagerInstance.GameOver();
     }
 }

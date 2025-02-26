@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 
+// COMPLETED
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager ScoreManagerInstance;
@@ -21,12 +22,15 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         // set the text of _currentScoreText to _score
+        _currentScoreText.text = _score.ToString();
     }
 
-    public void UpdateScore()
+    public void IncreaseScore()
     {
         // increment _score
+        _score++;
 
         // update the text of _currentScoreText to new _score
+        _currentScoreText.text = _score.ToString();
     }
 }
