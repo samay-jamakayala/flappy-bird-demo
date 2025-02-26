@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
         // set the text of _currentScoreText to _score
     }
 
-    public void UpdateScore()
+    public void IncreaseScore()
     {
         // increment _score
 
