@@ -5,18 +5,10 @@ public class PipeBehavior : MonoBehaviour
 {
     [SerializeField] private float _velocity = 0.5f;
 
-    private Transform pipe0;
-    private Transform pipe1;
-
-    void Start()
-    {
-        // assign the transforms of the child pipes
-    }
-
     // Update is called once per frame
     void Update()
     {
-        // move the child pipes left after frame according to the velocity, make sure to multiply by Time.deltaTime
+        // move the pipes left by moving the parent according to the velocity; make sure to multiply by Time.deltaTime
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
