@@ -9,6 +9,8 @@ public class PipeSpawnerBehavior : MonoBehaviour
     [SerializeField] private float _heightRange = 0.5f;
     [SerializeField] private GameObject _pipe;
 
+    private float _timer;
+
     // Start is called before the first frame update
     void Start()
     {
