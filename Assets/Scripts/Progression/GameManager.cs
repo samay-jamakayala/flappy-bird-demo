@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,19 +17,17 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // assign this to PlayButton
+    // note: when you want a button to call a method, that method must be public!
     public void RestartGame()
     {
-
+        // use SceneManager to reload the current scene
     }
 
     private void GameOver()
     {
+        // activate _gameOverCanvas
 
+        // set timeScale back to 0 to indicate that the game is over
     }
 }
