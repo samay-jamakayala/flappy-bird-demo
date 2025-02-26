@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// COMPLETED
+// DONE
 public class GroundBehavior : MonoBehaviour
 {
     [SerializeField] private float _velocity = 1f;
