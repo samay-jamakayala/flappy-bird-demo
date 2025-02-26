@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PipeBehavior : MonoBehaviour
 {
+    [SerializeField] private float _velocity = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,10 @@ public class PipeBehavior : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void IncreaseScore()
+    {
+
     }
 }
