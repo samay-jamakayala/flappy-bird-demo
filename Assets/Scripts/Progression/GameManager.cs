@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// TODO
+// DONE
 public class GameManager : MonoBehaviour
 {
     public static GameManager GameManagerInstance;
@@ -21,8 +21,10 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         // activate _gameOverCanvas
+        _gameOverCanvas.SetActive(true);
 
         // set timeScale back to 0 to indicate that the game is over
+        Time.timeScale = 0f;
     }
 
     // assign this to PlayButton
@@ -30,5 +32,6 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         // use SceneManager to reload the current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
