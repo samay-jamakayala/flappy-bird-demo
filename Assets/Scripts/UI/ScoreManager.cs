@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-// COMPLETED
+// DONE
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager ScoreManagerInstance;
