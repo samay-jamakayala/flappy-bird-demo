@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 
+// TODO
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager ScoreManagerInstance;
