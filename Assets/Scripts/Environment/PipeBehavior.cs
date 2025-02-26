@@ -9,17 +9,17 @@ public class PipeBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // move the pipe left after frame according to the velocity, make sure to multiply by Time.deltaTime
     }
 
-    private void IncreaseScore()
+    private void OTriggerEnter2D(Collider2D collision)
     {
-
+        // if trigger touches GameObject with Player tag, increase score
     }
 }

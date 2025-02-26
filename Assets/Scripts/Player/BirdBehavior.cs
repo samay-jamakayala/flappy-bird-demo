@@ -18,4 +18,9 @@ public class BirdBehavior : MonoBehaviour
         // when the left button is pressed in this frame...
         // adjust the velocity of _rb by Vector3.up multiplied by _velocity
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // call GameOver from GameManager
+    }
 }
