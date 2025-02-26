@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// TODO
 public class BirdBehavior : MonoBehaviour
 {
     [SerializeField] private float _velocity = 1.5f;
